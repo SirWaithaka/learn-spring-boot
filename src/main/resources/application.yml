@@ -1,0 +1,64 @@
+
+server:
+  port: 7017
+
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:26257/telkom_auth?ssl=true&sslmode=require&sslrootcert=$COCKROACH_CERTS/ca.crt&sslkey=$COCKROACH_CERTS/client.waitha.key&sslcert=$COCKROACH_CERTS/client.waithaka.crt
+    username: waithaka
+    password: kennedy
+    # JPA properties
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: false
+
+#number:
+#  url: http://192.168.1.2:9000/
+#  uris:
+#    search: /api/v1/generate
+#
+#
+#notify:
+#  url: http://192.168.1.3:3050/
+#  uris:
+#    service: /api/v1/send/notify
+#
+#
+#wallet:
+#  url: http://192.168.1.4:3070/
+#  uris:
+#    create: /api/v1/account/create
+
+
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5433/test-merchant
+#    username: postgres
+#    password: Thebuild2016
+#  # JPA properties
+#  jpa:
+#    hibernate:
+#      ddl-auto: create # When you launch the application for the first time - switch "none" at "create"
+#    show-sql: true
+#    database: postgresql
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    open-in-view: false
+#    generate-ddl: true
+
+
+
+
+
